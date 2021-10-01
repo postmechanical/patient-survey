@@ -14,6 +14,8 @@
 		B0F30EF52707C4640053CD69 /* Patient_SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EF42707C4640053CD69 /* Patient_SurveyTests.swift */; };
 		B0F30EFF2707C4640053CD69 /* Patient_SurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EFE2707C4640053CD69 /* Patient_SurveyUITests.swift */; };
 		B0F30F012707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F002707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift */; };
+		B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F0D2707D48D0053CD69 /* Coordinator.swift */; };
+		B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		B0F30EFA2707C4640053CD69 /* Patient SurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Patient SurveyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F30EFE2707C4640053CD69 /* Patient_SurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_SurveyUITests.swift; sourceTree = "<group>"; };
 		B0F30F002707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_SurveyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0F30F0D2707D48D0053CD69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				B0F30EE62707C4640053CD69 /* Assets.xcassets */,
 				B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */,
 				B0F30EEB2707C4640053CD69 /* Info.plist */,
+				B0F30F0D2707D48D0053CD69 /* Coordinator.swift */,
+				B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */,
 			);
 			path = "Patient Survey";
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */,
 				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
 				B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */,
+				B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
