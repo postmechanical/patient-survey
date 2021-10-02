@@ -17,6 +17,17 @@
 		B0F30F1327080BC80053CD69 /* Mokka in Frameworks */ = {isa = PBXBuildFile; productRef = B0F30F1227080BC80053CD69 /* Mokka */; };
 		B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */; };
 		B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1827080D560053CD69 /* MockNavigationController.swift */; };
+		B0F30F1C2708D4F50053CD69 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1B2708D4F50053CD69 /* Person.swift */; };
+		B0F30F1E2708D57C0053CD69 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1D2708D57C0053CD69 /* Patient.swift */; };
+		B0F30F202708D5DD0053CD69 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1F2708D5DD0053CD69 /* Doctor.swift */; };
+		B0F30F222708D5FA0053CD69 /* Diagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F212708D5FA0053CD69 /* Diagnosis.swift */; };
+		B0F30F242708D64C0053CD69 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F232708D64C0053CD69 /* Appointment.swift */; };
+		B0F30F272708D84D0053CD69 /* SurveyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F262708D84D0053CD69 /* SurveyResponse.swift */; };
+		B0F30F292708D8CD0053CD69 /* PermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F282708D8CD0053CD69 /* PermissionType.swift */; };
+		B0F30F2B2708D9AE0053CD69 /* Summarizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F2A2708D9AE0053CD69 /* Summarizable.swift */; };
+		B0F30F2D2708DBD90053CD69 /* SurveyPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */; };
+		B0F30F2F2708DD3A0053CD69 /* SurveyStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */; };
+		B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F302708DDAF0053CD69 /* Survey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +53,17 @@
 		B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyCoordinator.swift; sourceTree = "<group>"; };
 		B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControlling.swift; sourceTree = "<group>"; };
 		B0F30F1827080D560053CD69 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		B0F30F1B2708D4F50053CD69 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B0F30F1D2708D57C0053CD69 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		B0F30F1F2708D5DD0053CD69 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		B0F30F212708D5FA0053CD69 /* Diagnosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnosis.swift; sourceTree = "<group>"; };
+		B0F30F232708D64C0053CD69 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		B0F30F262708D84D0053CD69 /* SurveyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResponse.swift; sourceTree = "<group>"; };
+		B0F30F282708D8CD0053CD69 /* PermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionType.swift; sourceTree = "<group>"; };
+		B0F30F2A2708D9AE0053CD69 /* Summarizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summarizable.swift; sourceTree = "<group>"; };
+		B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPrompt.swift; sourceTree = "<group>"; };
+		B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStep.swift; sourceTree = "<group>"; };
+		B0F30F302708DDAF0053CD69 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				B0F30EDD2707C4620053CD69 /* AppDelegate.swift */,
-				B0F30EE12707C4620053CD69 /* ViewController.swift */,
-				B0F30EE62707C4640053CD69 /* Assets.xcassets */,
-				B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */,
-				B0F30EEB2707C4640053CD69 /* Info.plist */,
-				B0F30F1427080BF40053CD69 /* Protocols */,
+				B0F30F1A2708D4BE0053CD69 /* Models */,
 				B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */,
+				B0F30F1427080BF40053CD69 /* Protocols */,
+				B0F30F252708D79C0053CD69 /* Resources */,
+				B0F30EE12707C4620053CD69 /* ViewController.swift */,
 			);
 			path = "Patient Survey";
 			sourceTree = "<group>";
@@ -109,6 +130,8 @@
 			children = (
 				B0F30F0D2707D48D0053CD69 /* Coordinator.swift */,
 				B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */,
+				B0F30F1B2708D4F50053CD69 /* Person.swift */,
+				B0F30F2A2708D9AE0053CD69 /* Summarizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -119,6 +142,32 @@
 				B0F30F1827080D560053CD69 /* MockNavigationController.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B0F30F1A2708D4BE0053CD69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0F30F232708D64C0053CD69 /* Appointment.swift */,
+				B0F30F212708D5FA0053CD69 /* Diagnosis.swift */,
+				B0F30F1F2708D5DD0053CD69 /* Doctor.swift */,
+				B0F30F1D2708D57C0053CD69 /* Patient.swift */,
+				B0F30F282708D8CD0053CD69 /* PermissionType.swift */,
+				B0F30F302708DDAF0053CD69 /* Survey.swift */,
+				B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */,
+				B0F30F262708D84D0053CD69 /* SurveyResponse.swift */,
+				B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0F30F252708D79C0053CD69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0F30EE62707C4640053CD69 /* Assets.xcassets */,
+				B0F30EEB2707C4640053CD69 /* Info.plist */,
+				B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +276,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F30F1C2708D4F50053CD69 /* Person.swift in Sources */,
+				B0F30F272708D84D0053CD69 /* SurveyResponse.swift in Sources */,
 				B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */,
+				B0F30F202708D5DD0053CD69 /* Doctor.swift in Sources */,
+				B0F30F222708D5FA0053CD69 /* Diagnosis.swift in Sources */,
+				B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */,
 				B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */,
 				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
+				B0F30F1E2708D57C0053CD69 /* Patient.swift in Sources */,
 				B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */,
 				B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */,
+				B0F30F292708D8CD0053CD69 /* PermissionType.swift in Sources */,
+				B0F30F242708D64C0053CD69 /* Appointment.swift in Sources */,
+				B0F30F2F2708DD3A0053CD69 /* SurveyStep.swift in Sources */,
+				B0F30F2B2708D9AE0053CD69 /* Summarizable.swift in Sources */,
+				B0F30F2D2708DBD90053CD69 /* SurveyPrompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SZAUT969PA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Patient Survey/Info.plist";
+				INFOPLIST_FILE = "Patient Survey/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -418,7 +478,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SZAUT969PA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Patient Survey/Info.plist";
+				INFOPLIST_FILE = "Patient Survey/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
