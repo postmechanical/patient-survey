@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     override func loadView() {
+        super.loadView()
         view.backgroundColor = .white
         let label = UILabel()
         label.text = "Patient Survey"
