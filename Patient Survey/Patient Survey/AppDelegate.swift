@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         patientSurveyCoordinator.start()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = patientSurveyCoordinator.navigationController
+        window.rootViewController = patientSurveyCoordinator.navigationController as? UINavigationController
         window.makeKeyAndVisible()
         return true
     }

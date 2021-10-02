@@ -11,22 +11,16 @@
 		B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EE12707C4620053CD69 /* ViewController.swift */; };
 		B0F30EE72707C4640053CD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F30EE62707C4640053CD69 /* Assets.xcassets */; };
 		B0F30EEA2707C4640053CD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */; };
-		B0F30EF52707C4640053CD69 /* Patient_SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EF42707C4640053CD69 /* Patient_SurveyTests.swift */; };
-		B0F30EFF2707C4640053CD69 /* Patient_SurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EFE2707C4640053CD69 /* Patient_SurveyUITests.swift */; };
-		B0F30F012707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F002707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift */; };
+		B0F30EF52707C4640053CD69 /* PatientSurveyCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */; };
 		B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F0D2707D48D0053CD69 /* Coordinator.swift */; };
 		B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */; };
+		B0F30F1327080BC80053CD69 /* Mokka in Frameworks */ = {isa = PBXBuildFile; productRef = B0F30F1227080BC80053CD69 /* Mokka */; };
+		B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */; };
+		B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F1827080D560053CD69 /* MockNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B0F30EF12707C4640053CD69 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B0F30ED22707C4620053CD69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B0F30ED92707C4620053CD69;
-			remoteInfo = "Patient Survey";
-		};
-		B0F30EFB2707C4640053CD69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B0F30ED22707C4620053CD69 /* Project object */;
 			proxyType = 1;
@@ -43,12 +37,11 @@
 		B0F30EE92707C4640053CD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0F30EEB2707C4640053CD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F30EF02707C4640053CD69 /* Patient SurveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Patient SurveyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0F30EF42707C4640053CD69 /* Patient_SurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_SurveyTests.swift; sourceTree = "<group>"; };
-		B0F30EFA2707C4640053CD69 /* Patient SurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Patient SurveyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0F30EFE2707C4640053CD69 /* Patient_SurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_SurveyUITests.swift; sourceTree = "<group>"; };
-		B0F30F002707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_SurveyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyCoordinatorTests.swift; sourceTree = "<group>"; };
 		B0F30F0D2707D48D0053CD69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyCoordinator.swift; sourceTree = "<group>"; };
+		B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControlling.swift; sourceTree = "<group>"; };
+		B0F30F1827080D560053CD69 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B0F30EF72707C4640053CD69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B0F30F1327080BC80053CD69 /* Mokka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +68,6 @@
 			children = (
 				B0F30EDC2707C4620053CD69 /* Patient Survey */,
 				B0F30EF32707C4640053CD69 /* Patient SurveyTests */,
-				B0F30EFD2707C4640053CD69 /* Patient SurveyUITests */,
 				B0F30EDB2707C4620053CD69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +77,6 @@
 			children = (
 				B0F30EDA2707C4620053CD69 /* Patient Survey.app */,
 				B0F30EF02707C4640053CD69 /* Patient SurveyTests.xctest */,
-				B0F30EFA2707C4640053CD69 /* Patient SurveyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +89,7 @@
 				B0F30EE62707C4640053CD69 /* Assets.xcassets */,
 				B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */,
 				B0F30EEB2707C4640053CD69 /* Info.plist */,
-				B0F30F0D2707D48D0053CD69 /* Coordinator.swift */,
+				B0F30F1427080BF40053CD69 /* Protocols */,
 				B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */,
 			);
 			path = "Patient Survey";
@@ -113,18 +98,27 @@
 		B0F30EF32707C4640053CD69 /* Patient SurveyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B0F30EF42707C4640053CD69 /* Patient_SurveyTests.swift */,
+				B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */,
+				B0F30F1727080D460053CD69 /* Mocks */,
 			);
 			path = "Patient SurveyTests";
 			sourceTree = "<group>";
 		};
-		B0F30EFD2707C4640053CD69 /* Patient SurveyUITests */ = {
+		B0F30F1427080BF40053CD69 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B0F30EFE2707C4640053CD69 /* Patient_SurveyUITests.swift */,
-				B0F30F002707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift */,
+				B0F30F0D2707D48D0053CD69 /* Coordinator.swift */,
+				B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */,
 			);
-			path = "Patient SurveyUITests";
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B0F30F1727080D460053CD69 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B0F30F1827080D560053CD69 /* MockNavigationController.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,27 +155,12 @@
 				B0F30EF22707C4640053CD69 /* PBXTargetDependency */,
 			);
 			name = "Patient SurveyTests";
+			packageProductDependencies = (
+				B0F30F1227080BC80053CD69 /* Mokka */,
+			);
 			productName = "Patient SurveyTests";
 			productReference = B0F30EF02707C4640053CD69 /* Patient SurveyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B0F30EF92707C4640053CD69 /* Patient SurveyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B0F30F0A2707C4640053CD69 /* Build configuration list for PBXNativeTarget "Patient SurveyUITests" */;
-			buildPhases = (
-				B0F30EF62707C4640053CD69 /* Sources */,
-				B0F30EF72707C4640053CD69 /* Frameworks */,
-				B0F30EF82707C4640053CD69 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B0F30EFC2707C4640053CD69 /* PBXTargetDependency */,
-			);
-			name = "Patient SurveyUITests";
-			productName = "Patient SurveyUITests";
-			productReference = B0F30EFA2707C4640053CD69 /* Patient SurveyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,10 +179,6 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = B0F30ED92707C4620053CD69;
 					};
-					B0F30EF92707C4640053CD69 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = B0F30ED92707C4620053CD69;
-					};
 				};
 			};
 			buildConfigurationList = B0F30ED52707C4620053CD69 /* Build configuration list for PBXProject "Patient Survey" */;
@@ -215,13 +190,15 @@
 				Base,
 			);
 			mainGroup = B0F30ED12707C4620053CD69;
+			packageReferences = (
+				B0F30F1127080BC80053CD69 /* XCRemoteSwiftPackageReference "Mokka" */,
+			);
 			productRefGroup = B0F30EDB2707C4620053CD69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B0F30ED92707C4620053CD69 /* Patient Survey */,
 				B0F30EEF2707C4640053CD69 /* Patient SurveyTests */,
-				B0F30EF92707C4640053CD69 /* Patient SurveyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +220,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0F30EF82707C4640053CD69 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */,
+				B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */,
 				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
 				B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */,
 				B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */,
@@ -268,16 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F30EF52707C4640053CD69 /* Patient_SurveyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B0F30EF62707C4640053CD69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B0F30F012707C4640053CD69 /* Patient_SurveyUITestsLaunchTests.swift in Sources */,
-				B0F30EFF2707C4640053CD69 /* Patient_SurveyUITests.swift in Sources */,
+				B0F30EF52707C4640053CD69 /* PatientSurveyCoordinatorTests.swift in Sources */,
+				B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +251,6 @@
 			isa = PBXTargetDependency;
 			target = B0F30ED92707C4620053CD69 /* Patient Survey */;
 			targetProxy = B0F30EF12707C4640053CD69 /* PBXContainerItemProxy */;
-		};
-		B0F30EFC2707C4640053CD69 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B0F30ED92707C4620053CD69 /* Patient Survey */;
-			targetProxy = B0F30EFB2707C4640053CD69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -528,52 +486,6 @@
 			};
 			name = Release;
 		};
-		B0F30F0B2707C4640053CD69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SZAUT969PA;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.postmechanical.Patient-SurveyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Patient Survey";
-			};
-			name = Debug;
-		};
-		B0F30F0C2707C4640053CD69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SZAUT969PA;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.postmechanical.Patient-SurveyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Patient Survey";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -604,16 +516,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0F30F0A2707C4640053CD69 /* Build configuration list for PBXNativeTarget "Patient SurveyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B0F30F0B2707C4640053CD69 /* Debug */,
-				B0F30F0C2707C4640053CD69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0F30F1127080BC80053CD69 /* XCRemoteSwiftPackageReference "Mokka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielr/Mokka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0F30F1227080BC80053CD69 /* Mokka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0F30F1127080BC80053CD69 /* XCRemoteSwiftPackageReference "Mokka" */;
+			productName = Mokka;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0F30ED22707C4620053CD69 /* Project object */;
 }

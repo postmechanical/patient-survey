@@ -8,9 +8,9 @@
 import UIKit
 
 class PatientSurveyCoordinator: Coordinator {
-    let navigationController: UINavigationController
+    let navigationController: NavigationControlling
     
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: NavigationControlling) {
         self.navigationController = navigationController
     }
 
