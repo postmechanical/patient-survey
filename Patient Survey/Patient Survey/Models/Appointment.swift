@@ -7,11 +7,26 @@
 
 import Foundation
 
-struct Appointment: Identifiable {
+struct Appointment: Equatable, Identifiable, ResourceInitializable {
     typealias ID = UUID
 
     let id: UUID
     let type: String
-    let doctor: Doctor
-    let patient: Patient
+    let doctorId: UUID
+    let patientId: UUID
+    
+    init?(from resource: Resource) {
+        id = resource.id
+        guard let type = resource.type?.map({ $0.text }).joined(separator: ", "),
+        let actorReference = resource.actor?.reference,
+        let doctorId = UUID(uuidString: actorReference.replacingOccurrences(of: "\(String(describing: Doctor.self))/", with: "")),
+        let subjectReference = resource.subject?.reference,
+        let patientId = UUID(uuidString: subjectReference.replacingOccurrences(of: "\(String(describing: Patient.self))/", with: ""))
+        else {
+            return nil
+        }
+        self.type = type
+        self.doctorId = doctorId
+        self.patientId = patientId
+    }
 }

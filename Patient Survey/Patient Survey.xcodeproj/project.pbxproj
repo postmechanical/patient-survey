@@ -31,6 +31,11 @@
 		B0F30F3327092DA00053CD69 /* PermissionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */; };
 		B0F30F3527092EB50053CD69 /* SurveyPromptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */; };
 		B0F30F37270930D90053CD69 /* SurveyResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */; };
+		B0F30F3927094CBE0053CD69 /* PatientSurveyStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3827094CBE0053CD69 /* PatientSurveyStoreProtocol.swift */; };
+		B0F30F3B270950D80053CD69 /* PatientSurveyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3A270950D70053CD69 /* PatientSurveyStore.swift */; };
+		B0F30F3D270953030053CD69 /* ResourceBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3C270953030053CD69 /* ResourceBundle.swift */; };
+		B0F30F4527095AC30053CD69 /* PatientSurveyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4427095AC30053CD69 /* PatientSurveyStoreTests.swift */; };
+		B0F30F4727095E2E0053CD69 /* ResourceInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4627095E2E0053CD69 /* ResourceInitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTypeTests.swift; sourceTree = "<group>"; };
 		B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPromptTests.swift; sourceTree = "<group>"; };
 		B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResponseTests.swift; sourceTree = "<group>"; };
+		B0F30F3827094CBE0053CD69 /* PatientSurveyStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyStoreProtocol.swift; sourceTree = "<group>"; };
+		B0F30F3A270950D70053CD69 /* PatientSurveyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyStore.swift; sourceTree = "<group>"; };
+		B0F30F3C270953030053CD69 /* ResourceBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceBundle.swift; sourceTree = "<group>"; };
+		B0F30F4427095AC30053CD69 /* PatientSurveyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyStoreTests.swift; sourceTree = "<group>"; };
+		B0F30F4627095E2E0053CD69 /* ResourceInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 				B0F30EDD2707C4620053CD69 /* AppDelegate.swift */,
 				B0F30F1A2708D4BE0053CD69 /* Models */,
 				B0F30F0F2707D4E00053CD69 /* PatientSurveyCoordinator.swift */,
+				B0F30F3A270950D70053CD69 /* PatientSurveyStore.swift */,
 				B0F30F1427080BF40053CD69 /* Protocols */,
 				B0F30F252708D79C0053CD69 /* Resources */,
 				B0F30EE12707C4620053CD69 /* ViewController.swift */,
@@ -127,6 +138,7 @@
 			children = (
 				B0F30F1727080D460053CD69 /* Mocks */,
 				B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */,
+				B0F30F4427095AC30053CD69 /* PatientSurveyStoreTests.swift */,
 				B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */,
 				B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */,
 				B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */,
@@ -139,7 +151,9 @@
 			children = (
 				B0F30F0D2707D48D0053CD69 /* Coordinator.swift */,
 				B0F30F1527080C6F0053CD69 /* NavigationControlling.swift */,
+				B0F30F3827094CBE0053CD69 /* PatientSurveyStoreProtocol.swift */,
 				B0F30F1B2708D4F50053CD69 /* Person.swift */,
+				B0F30F4627095E2E0053CD69 /* ResourceInitializable.swift */,
 				B0F30F2A2708D9AE0053CD69 /* Summarizable.swift */,
 			);
 			path = Protocols;
@@ -165,6 +179,7 @@
 				B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */,
 				B0F30F262708D84D0053CD69 /* SurveyResponse.swift */,
 				B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */,
+				B0F30F3C270953030053CD69 /* ResourceBundle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,14 +301,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F30F1C2708D4F50053CD69 /* Person.swift in Sources */,
+				B0F30F3B270950D80053CD69 /* PatientSurveyStore.swift in Sources */,
 				B0F30F272708D84D0053CD69 /* SurveyResponse.swift in Sources */,
 				B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */,
 				B0F30F202708D5DD0053CD69 /* Doctor.swift in Sources */,
 				B0F30F222708D5FA0053CD69 /* Diagnosis.swift in Sources */,
 				B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */,
+				B0F30F4727095E2E0053CD69 /* ResourceInitializable.swift in Sources */,
 				B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */,
+				B0F30F3D270953030053CD69 /* ResourceBundle.swift in Sources */,
 				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
 				B0F30F1E2708D57C0053CD69 /* Patient.swift in Sources */,
+				B0F30F3927094CBE0053CD69 /* PatientSurveyStoreProtocol.swift in Sources */,
 				B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */,
 				B0F30F0E2707D48D0053CD69 /* Coordinator.swift in Sources */,
 				B0F30F292708D8CD0053CD69 /* PermissionType.swift in Sources */,
@@ -313,6 +332,7 @@
 				B0F30F3527092EB50053CD69 /* SurveyPromptTests.swift in Sources */,
 				B0F30F3327092DA00053CD69 /* PermissionTypeTests.swift in Sources */,
 				B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */,
+				B0F30F4527095AC30053CD69 /* PatientSurveyStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
