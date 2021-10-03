@@ -7,6 +7,7 @@
 
 import Foundation
 
+@dynamicMemberLookup
 struct Appointment: Equatable, Identifiable, ResourceInitializable {
     typealias ID = UUID
 
@@ -28,5 +29,20 @@ struct Appointment: Equatable, Identifiable, ResourceInitializable {
         self.type = type
         self.doctorId = doctorId
         self.patientId = patientId
+    }
+    
+    subscript(dynamicMember string: String) -> String? {
+        switch string {
+        case "id":
+            return id.uuidString
+        case "type":
+            return type
+        case "doctorId":
+            return doctorId.uuidString
+        case "patientId":
+            return patientId.uuidString
+        default:
+            return nil
+        }
     }
 }

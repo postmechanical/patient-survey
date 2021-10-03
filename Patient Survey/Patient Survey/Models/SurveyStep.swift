@@ -10,7 +10,7 @@ import UIKit
 
 struct SurveyStep {
     let prompt: SurveyPrompt
-    let response: SurveyResponse
+    let responseType: SurveyResponseType
     
     func makeView() -> UIView {
         UIView()

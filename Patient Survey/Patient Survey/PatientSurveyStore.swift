@@ -30,11 +30,17 @@ class PatientSurveyStore: PatientSurveyStoreProtocol {
         guard let patient = model(of: Patient.self, with: patientId),
               let appointment = models(of: Appointment.self).first(where: { $0.patientId == patientId }),
               let diagnosis = models(of: Diagnosis.self).first(where: { $0.appointmentId == appointment.id }),
-              let doctor = models(of: Doctor.self).first(where: { $0.id == appointment.doctorId })
+              let doctor = models(of: Doctor.self).first(where: { $0.id == appointment.doctorId }),
+              let data = NSDataAsset(name: "patient-survey-steps")?.data,
+              let stepTemplates = try? JSONDecoder().decode([SurveyStepTemplate].self, from: data)
         else {
             return nil
         }
-        return Survey(appointment: appointment, diagnosis: diagnosis, doctor: doctor, patient: patient, steps: [])
+        let steps = stepTemplates.compactMap({ SurveyStepBuilder(appointment: appointment, diagnosis: diagnosis, doctor: doctor, patient: patient, template: $0).makeSurveyStep() })
+        guard !steps.isEmpty else {
+            return nil
+        }
+        return Survey(appointment: appointment, diagnosis: diagnosis, doctor: doctor, patient: patient, steps: steps)
     }
     
     func addSurveyResponse(_ response: SurveyResponse, for patient: Patient) {

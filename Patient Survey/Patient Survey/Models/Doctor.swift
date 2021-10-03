@@ -7,6 +7,7 @@
 
 import Foundation
 
+@dynamicMemberLookup
 struct Doctor: Equatable, Identifiable, Person, ResourceInitializable {
     typealias ID = UUID
     
@@ -22,5 +23,18 @@ struct Doctor: Equatable, Identifiable, Person, ResourceInitializable {
         }
         self.firstName = firstName
         self.lastName = lastName
+    }
+    
+    subscript(dynamicMember string: String) -> String? {
+        switch string {
+        case "id":
+            return id.uuidString
+        case "firstName":
+            return firstName
+        case "lastName":
+            return lastName
+        default:
+            return nil
+        }
     }
 }

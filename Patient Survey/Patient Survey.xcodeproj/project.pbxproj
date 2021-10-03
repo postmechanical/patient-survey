@@ -36,6 +36,9 @@
 		B0F30F3D270953030053CD69 /* ResourceBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3C270953030053CD69 /* ResourceBundle.swift */; };
 		B0F30F4527095AC30053CD69 /* PatientSurveyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4427095AC30053CD69 /* PatientSurveyStoreTests.swift */; };
 		B0F30F4727095E2E0053CD69 /* ResourceInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4627095E2E0053CD69 /* ResourceInitializable.swift */; };
+		B0F30F4927096CF20053CD69 /* SurveyStepTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4827096CF20053CD69 /* SurveyStepTemplate.swift */; };
+		B0F30F4B27096E820053CD69 /* SurveyStepBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4A27096E820053CD69 /* SurveyStepBuilder.swift */; };
+		B0F30F4D270970B00053CD69 /* SurveyResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4C270970B00053CD69 /* SurveyResponseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		B0F30F3C270953030053CD69 /* ResourceBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceBundle.swift; sourceTree = "<group>"; };
 		B0F30F4427095AC30053CD69 /* PatientSurveyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSurveyStoreTests.swift; sourceTree = "<group>"; };
 		B0F30F4627095E2E0053CD69 /* ResourceInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInitializable.swift; sourceTree = "<group>"; };
+		B0F30F4827096CF20053CD69 /* SurveyStepTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStepTemplate.swift; sourceTree = "<group>"; };
+		B0F30F4A27096E820053CD69 /* SurveyStepBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStepBuilder.swift; sourceTree = "<group>"; };
+		B0F30F4C270970B00053CD69 /* SurveyResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResponseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +181,14 @@
 				B0F30F1F2708D5DD0053CD69 /* Doctor.swift */,
 				B0F30F1D2708D57C0053CD69 /* Patient.swift */,
 				B0F30F282708D8CD0053CD69 /* PermissionType.swift */,
+				B0F30F3C270953030053CD69 /* ResourceBundle.swift */,
 				B0F30F302708DDAF0053CD69 /* Survey.swift */,
 				B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */,
 				B0F30F262708D84D0053CD69 /* SurveyResponse.swift */,
+				B0F30F4C270970B00053CD69 /* SurveyResponseType.swift */,
 				B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */,
-				B0F30F3C270953030053CD69 /* ResourceBundle.swift */,
+				B0F30F4A27096E820053CD69 /* SurveyStepBuilder.swift */,
+				B0F30F4827096CF20053CD69 /* SurveyStepTemplate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F30F4D270970B00053CD69 /* SurveyResponseType.swift in Sources */,
 				B0F30F1C2708D4F50053CD69 /* Person.swift in Sources */,
 				B0F30F3B270950D80053CD69 /* PatientSurveyStore.swift in Sources */,
 				B0F30F272708D84D0053CD69 /* SurveyResponse.swift in Sources */,
@@ -308,6 +318,7 @@
 				B0F30F222708D5FA0053CD69 /* Diagnosis.swift in Sources */,
 				B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */,
 				B0F30F4727095E2E0053CD69 /* ResourceInitializable.swift in Sources */,
+				B0F30F4927096CF20053CD69 /* SurveyStepTemplate.swift in Sources */,
 				B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */,
 				B0F30F3D270953030053CD69 /* ResourceBundle.swift in Sources */,
 				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
@@ -320,6 +331,7 @@
 				B0F30F2F2708DD3A0053CD69 /* SurveyStep.swift in Sources */,
 				B0F30F2B2708D9AE0053CD69 /* Summarizable.swift in Sources */,
 				B0F30F2D2708DBD90053CD69 /* SurveyPrompt.swift in Sources */,
+				B0F30F4B27096E820053CD69 /* SurveyStepBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
