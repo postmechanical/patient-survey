@@ -16,7 +16,7 @@ enum SurveyPrompt: Summarizable {
         case .text(let string):
             return string
         case .permission(let permissionType):
-            return String(format: NSLocalizedString("Please grant %@ access to submit.", comment: ""), permissionType.summary)
+            return String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), permissionType.summary)
         }
     }
 }

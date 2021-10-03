@@ -28,6 +28,9 @@
 		B0F30F2D2708DBD90053CD69 /* SurveyPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */; };
 		B0F30F2F2708DD3A0053CD69 /* SurveyStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */; };
 		B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F302708DDAF0053CD69 /* Survey.swift */; };
+		B0F30F3327092DA00053CD69 /* PermissionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */; };
+		B0F30F3527092EB50053CD69 /* SurveyPromptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */; };
+		B0F30F37270930D90053CD69 /* SurveyResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		B0F30F2C2708DBD90053CD69 /* SurveyPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPrompt.swift; sourceTree = "<group>"; };
 		B0F30F2E2708DD3A0053CD69 /* SurveyStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStep.swift; sourceTree = "<group>"; };
 		B0F30F302708DDAF0053CD69 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTypeTests.swift; sourceTree = "<group>"; };
+		B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPromptTests.swift; sourceTree = "<group>"; };
+		B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,11 @@
 		B0F30EF32707C4640053CD69 /* Patient SurveyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */,
 				B0F30F1727080D460053CD69 /* Mocks */,
+				B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */,
+				B0F30F3227092DA00053CD69 /* PermissionTypeTests.swift */,
+				B0F30F3427092EB50053CD69 /* SurveyPromptTests.swift */,
+				B0F30F36270930D90053CD69 /* SurveyResponseTests.swift */,
 			);
 			path = "Patient SurveyTests";
 			sourceTree = "<group>";
@@ -300,6 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F30EF52707C4640053CD69 /* PatientSurveyCoordinatorTests.swift in Sources */,
+				B0F30F37270930D90053CD69 /* SurveyResponseTests.swift in Sources */,
+				B0F30F3527092EB50053CD69 /* SurveyPromptTests.swift in Sources */,
+				B0F30F3327092DA00053CD69 /* PermissionTypeTests.swift in Sources */,
 				B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
