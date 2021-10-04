@@ -41,7 +41,7 @@ class PatientSurveyStoreTests: XCTestCase {
         XCTAssertEqual(survey?.diagnosis, store.model(of: Diagnosis.self, with: try XCTUnwrap(UUID(uuidString: "541a72a8-df75-4484-ac89-ac4923f03b81"))))
         XCTAssertEqual(survey?.appointment, store.model(of: Appointment.self, with: try XCTUnwrap(UUID(uuidString: "be142dc6-93bd-11eb-a8b3-0242ac130003"))))
         survey?.steps.forEach { step in
-            XCTAssertFalse(step.prompt.summary.contains("{"))
+            XCTAssertFalse(step.prompt.summary.text.contains("{"))
         }
     }
 }

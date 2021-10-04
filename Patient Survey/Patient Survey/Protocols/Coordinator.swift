@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
     var navigationController: NavigationControlling { get }
     func start()
+    func next(add response: SurveyResponse?)
+    func finish()
 }

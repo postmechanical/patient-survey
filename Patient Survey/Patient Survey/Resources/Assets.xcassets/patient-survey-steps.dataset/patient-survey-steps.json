@@ -2,16 +2,23 @@
   {
     "template": "Hi {patient.firstName}, on a scale of 1-10, would you recommend Dr {doctor.lastName} to a friend or family member? 1 = Would not recommend, 10 = Would strongly recommend",
     "promptType": "text",
-    "responseType": "scale"
+    "responseType": {
+      "name": "scale",
+      "value": [0, 10]
+    }
   },
   {
     "template": "Thank you. You were diagnosed with {diagnosis.name}. Did Dr {doctor.lastName} explain how to manage this diagnosis in a way you could understand?",
     "promptType": "text",
-    "responseType": "text"
+    "responseType": {
+      "name": "bool"
+    }
   },
   {
     "template": "We appreciate the feedback, one last question: how do you feel about being diagnosed with {diagnosis.name}?",
     "promptType": "text",
-    "responseType": "text"
+    "responseType":  {
+      "name": "text"
+    }
   }
 ]

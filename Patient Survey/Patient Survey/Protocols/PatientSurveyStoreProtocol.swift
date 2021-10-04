@@ -10,5 +10,5 @@ import Foundation
 protocol PatientSurveyStoreProtocol {
     func survey(for patientId: UUID) -> Survey?
     func addSurveyResponse(_ response: SurveyResponse, for patient: Patient)
-    func getSurveySummary(for patient: Patient) -> [String]?
+    func getSurveySummary(for patient: Patient) -> [Summary]?
 }

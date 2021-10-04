@@ -13,12 +13,12 @@ class SurveyPromptTests: XCTestCase {
     func testSummary() {
         let text = "Sup?"
         let textPrompt = SurveyPrompt.text(text)
-        XCTAssertEqual(textPrompt.summary, text)
+        XCTAssertEqual(textPrompt.summary.text, text)
         
         let cameraPermissionPrompt = SurveyPrompt.permission(.camera)
-        XCTAssertEqual(cameraPermissionPrompt.summary, String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), PermissionType.camera.summary))
+        XCTAssertEqual(cameraPermissionPrompt.summary.text, String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), PermissionType.camera.summary.text))
         
         let locationPermissionPrompt = SurveyPrompt.permission(.location)
-        XCTAssertEqual(locationPermissionPrompt.summary, String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), PermissionType.location.summary))
+        XCTAssertEqual(locationPermissionPrompt.summary.text, String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), PermissionType.location.summary.text))
     }
 }

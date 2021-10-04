@@ -11,12 +11,12 @@ enum SurveyPrompt: Summarizable {
     case text(String)
     case permission(PermissionType)
     
-    var summary: String {
+    var summary: Summary {
         switch self {
         case .text(let string):
-            return string
+            return Summary(text: string, commentary: nil)
         case .permission(let permissionType):
-            return String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), permissionType.summary)
+            return Summary(text: String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), permissionType.summary.text), commentary: nil)
         }
     }
 }

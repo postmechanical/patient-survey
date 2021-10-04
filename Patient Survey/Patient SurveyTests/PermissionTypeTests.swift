@@ -12,9 +12,9 @@ import XCTest
 class PermissionTypeTests: XCTestCase {
     func testSummary() {
         let cameraPermissionType = PermissionType.camera
-        XCTAssertEqual(cameraPermissionType.summary, NSLocalizedString("camera & photo", comment: ""))
+        XCTAssertEqual(cameraPermissionType.summary.text, NSLocalizedString("camera & photo", comment: ""))
         
         let locationPermissionType = PermissionType.location
-        XCTAssertEqual(locationPermissionType.summary, NSLocalizedString("location", comment: ""))
+        XCTAssertEqual(locationPermissionType.summary.text, NSLocalizedString("location", comment: ""))
     }
 }

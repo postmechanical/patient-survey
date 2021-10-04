@@ -11,12 +11,12 @@ enum PermissionType: Summarizable {
     case camera
     case location
     
-    var summary: String {
+    var summary: Summary {
         switch self {
         case .camera:
-            return NSLocalizedString("camera & photo", comment: "")
+            return Summary(text: NSLocalizedString("camera & photo", comment: ""), commentary: nil)
         case .location:
-            return NSLocalizedString("location", comment: "")
+            return Summary(text: NSLocalizedString("location", comment: ""), commentary: nil)
         }
     }
 }

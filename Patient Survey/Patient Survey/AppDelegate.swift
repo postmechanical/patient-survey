@@ -10,7 +10,10 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var patientSurveyCoordinator: PatientSurveyCoordinator = {
-        PatientSurveyCoordinator(UINavigationController(nibName: nil, bundle: nil))
+        PatientSurveyCoordinator(
+            navigationController: UINavigationController(nibName: nil, bundle: nil),
+            patientSurveyStore: PatientSurveyStore()
+        )
     }()
     
     var window: UIWindow?

@@ -11,16 +11,45 @@ import XCTest
 class PatientSurveyCoordinatorTests: XCTestCase {
     var patientSurveyCoordinator: PatientSurveyCoordinator!
     var navigationController: MockNavigationController!
+    var patientSurveyStore: MockPatientSurveyStore!
     
     override func setUp() {
         super.setUp()
         navigationController = MockNavigationController()
-        patientSurveyCoordinator = PatientSurveyCoordinator(navigationController)
+        patientSurveyStore = MockPatientSurveyStore()
+        patientSurveyStore.survey.defaultReturnValue = Survey.mock()
+        patientSurveyStore.getSurveySummary.defaultReturnValue = []
+        patientSurveyCoordinator = PatientSurveyCoordinator(
+            navigationController: navigationController,
+            patientSurveyStore: patientSurveyStore
+        )
     }
     
-    func testWhenStartExpectNavigationControllerToPush() {
+    func testWhenStartExpectToGetSurveyFromPatientSurveyStoreAndNavigationControllerToPushSurveyStepViewController() {
         patientSurveyCoordinator.start()
-        XCTAssertTrue(navigationController.pushViewController.argument?.viewController is ViewController)
-        XCTAssertFalse(navigationController.pushViewController.argument?.animated ?? true)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.viewControllers.first is SurveyStepViewController)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.animated ?? false)
+    }
+    
+    func testWhenNextExpectPatientSurveyStoreToGetNextStepAddCurrentResponseAndNavigationControllerToPushNextSurveyStepViewController() {
+        patientSurveyCoordinator.start()
+        patientSurveyCoordinator.next(add: nil)
+        XCTAssertTrue(navigationController.pushViewController.argument?.viewController is SurveyStepViewController)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.animated ?? false)
+    }
+
+    func testWhenNextOnLastStepExpectPatientSurveyStoreToAddCurrentResponseAndNavigationControllerToSetViewControllersToSurveySummaryViewController() {
+        patientSurveyCoordinator.start()
+        patientSurveyCoordinator.next(add: nil)
+        patientSurveyCoordinator.next(add: nil)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.viewControllers.first is SurveySummaryViewController)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.animated ?? false)
+    }
+    
+    func testWhenFinishExpectNavigationControllerToSetViewControllersToSurveySummaryViewController() {
+        patientSurveyCoordinator.start()
+        patientSurveyCoordinator.finish()
+        XCTAssertTrue(navigationController.setViewControllers.argument?.viewControllers.first is SurveySummaryViewController)
+        XCTAssertTrue(navigationController.setViewControllers.argument?.animated ?? false)
     }
 }

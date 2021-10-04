@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EDD2707C4620053CD69 /* AppDelegate.swift */; };
-		B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EE12707C4620053CD69 /* ViewController.swift */; };
+		B0F30EE22707C4620053CD69 /* SurveyStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EE12707C4620053CD69 /* SurveyStepViewController.swift */; };
 		B0F30EE72707C4640053CD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F30EE62707C4640053CD69 /* Assets.xcassets */; };
 		B0F30EEA2707C4640053CD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */; };
 		B0F30EF52707C4640053CD69 /* PatientSurveyCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30EF42707C4640053CD69 /* PatientSurveyCoordinatorTests.swift */; };
@@ -39,6 +39,9 @@
 		B0F30F4927096CF20053CD69 /* SurveyStepTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4827096CF20053CD69 /* SurveyStepTemplate.swift */; };
 		B0F30F4B27096E820053CD69 /* SurveyStepBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4A27096E820053CD69 /* SurveyStepBuilder.swift */; };
 		B0F30F4D270970B00053CD69 /* SurveyResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4C270970B00053CD69 /* SurveyResponseType.swift */; };
+		B0F30F4F270A9DD50053CD69 /* MockPatientSurveyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F4E270A9DD50053CD69 /* MockPatientSurveyStore.swift */; };
+		B0F30F51270AA69E0053CD69 /* Survey+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F50270AA69E0053CD69 /* Survey+Mock.swift */; };
+		B0F30F54270ABCA40053CD69 /* SurveySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F30F53270ABCA40053CD69 /* SurveySummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,7 @@
 /* Begin PBXFileReference section */
 		B0F30EDA2707C4620053CD69 /* Patient Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patient Survey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F30EDD2707C4620053CD69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0F30EE12707C4620053CD69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0F30EE12707C4620053CD69 /* SurveyStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStepViewController.swift; sourceTree = "<group>"; };
 		B0F30EE62707C4640053CD69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0F30EE92707C4640053CD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0F30EEB2707C4640053CD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +89,9 @@
 		B0F30F4827096CF20053CD69 /* SurveyStepTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStepTemplate.swift; sourceTree = "<group>"; };
 		B0F30F4A27096E820053CD69 /* SurveyStepBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStepBuilder.swift; sourceTree = "<group>"; };
 		B0F30F4C270970B00053CD69 /* SurveyResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResponseType.swift; sourceTree = "<group>"; };
+		B0F30F4E270A9DD50053CD69 /* MockPatientSurveyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPatientSurveyStore.swift; sourceTree = "<group>"; };
+		B0F30F50270AA69E0053CD69 /* Survey+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Survey+Mock.swift"; sourceTree = "<group>"; };
+		B0F30F53270ABCA40053CD69 /* SurveySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,7 @@
 				B0F30F3A270950D70053CD69 /* PatientSurveyStore.swift */,
 				B0F30F1427080BF40053CD69 /* Protocols */,
 				B0F30F252708D79C0053CD69 /* Resources */,
-				B0F30EE12707C4620053CD69 /* ViewController.swift */,
+				B0F30F52270ABC7C0053CD69 /* View Controllers */,
 			);
 			path = "Patient Survey";
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				B0F30F1827080D560053CD69 /* MockNavigationController.swift */,
+				B0F30F4E270A9DD50053CD69 /* MockPatientSurveyStore.swift */,
+				B0F30F50270AA69E0053CD69 /* Survey+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -201,6 +209,15 @@
 				B0F30EE82707C4640053CD69 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B0F30F52270ABC7C0053CD69 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0F30EE12707C4620053CD69 /* SurveyStepViewController.swift */,
+				B0F30F53270ABCA40053CD69 /* SurveySummaryViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +331,7 @@
 				B0F30F3B270950D80053CD69 /* PatientSurveyStore.swift in Sources */,
 				B0F30F272708D84D0053CD69 /* SurveyResponse.swift in Sources */,
 				B0F30F102707D4E00053CD69 /* PatientSurveyCoordinator.swift in Sources */,
+				B0F30F54270ABCA40053CD69 /* SurveySummaryViewController.swift in Sources */,
 				B0F30F202708D5DD0053CD69 /* Doctor.swift in Sources */,
 				B0F30F222708D5FA0053CD69 /* Diagnosis.swift in Sources */,
 				B0F30F312708DDAF0053CD69 /* Survey.swift in Sources */,
@@ -321,7 +339,7 @@
 				B0F30F4927096CF20053CD69 /* SurveyStepTemplate.swift in Sources */,
 				B0F30F1627080C6F0053CD69 /* NavigationControlling.swift in Sources */,
 				B0F30F3D270953030053CD69 /* ResourceBundle.swift in Sources */,
-				B0F30EE22707C4620053CD69 /* ViewController.swift in Sources */,
+				B0F30EE22707C4620053CD69 /* SurveyStepViewController.swift in Sources */,
 				B0F30F1E2708D57C0053CD69 /* Patient.swift in Sources */,
 				B0F30F3927094CBE0053CD69 /* PatientSurveyStoreProtocol.swift in Sources */,
 				B0F30EDE2707C4620053CD69 /* AppDelegate.swift in Sources */,
@@ -345,6 +363,8 @@
 				B0F30F3327092DA00053CD69 /* PermissionTypeTests.swift in Sources */,
 				B0F30F1927080D560053CD69 /* MockNavigationController.swift in Sources */,
 				B0F30F4527095AC30053CD69 /* PatientSurveyStoreTests.swift in Sources */,
+				B0F30F4F270A9DD50053CD69 /* MockPatientSurveyStore.swift in Sources */,
+				B0F30F51270AA69E0053CD69 /* Survey+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

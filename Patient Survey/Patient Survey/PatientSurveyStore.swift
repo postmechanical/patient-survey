@@ -40,6 +40,7 @@ class PatientSurveyStore: PatientSurveyStoreProtocol {
         guard !steps.isEmpty else {
             return nil
         }
+        responses[patientId] = []
         return Survey(appointment: appointment, diagnosis: diagnosis, doctor: doctor, patient: patient, steps: steps)
     }
     
@@ -49,7 +50,7 @@ class PatientSurveyStore: PatientSurveyStoreProtocol {
         responses[patient.id] = patientResponses
     }
     
-    func getSurveySummary(for patient: Patient) -> [String]? {
+    func getSurveySummary(for patient: Patient) -> [Summary]? {
         guard let patientResponses = responses[patient.id] else {
             return nil
         }

@@ -8,5 +8,10 @@
 import Foundation
 
 protocol Summarizable {
-    var summary: String { get }
+    var summary: Summary { get }
+}
+
+struct Summary {
+    let text: String
+    let commentary: String?
 }
