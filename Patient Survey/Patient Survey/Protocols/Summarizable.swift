@@ -14,4 +14,11 @@ protocol Summarizable {
 struct Summary {
     let text: String
     let commentary: String?
+    let data: Any?
+
+    init(text: String, commentary: String? = nil, data: Any? = nil) {
+        self.text = text
+        self.commentary = commentary
+        self.data = data
+    }
 }

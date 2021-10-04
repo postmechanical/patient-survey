@@ -5,6 +5,7 @@
 //  Created by Aaron London on 10/1/21.
 //
 
+import PhotosUI
 import UIKit
 
 class PatientSurveyCoordinator: Coordinator {
@@ -13,6 +14,7 @@ class PatientSurveyCoordinator: Coordinator {
     
     private var survey: Survey?
     private var currentStepIndex = 0
+    private var permissionCompletion: ((Any?) -> Void)?
     
     init(navigationController: NavigationControlling, patientSurveyStore: PatientSurveyStoreProtocol) {
         self.navigationController = navigationController
@@ -63,6 +65,22 @@ class PatientSurveyCoordinator: Coordinator {
         navigationController.setViewControllers([surveySummaryViewController], animated: true)
     }
     
+    func promptFor(permission: PermissionType, completion: ((Any?) -> Void)?) {
+        switch permission {
+        case .camera:
+            var configuration = PHPickerConfiguration(photoLibrary: .shared())
+            configuration.selectionLimit = 1
+            configuration.filter = .images
+            let picker = PHPickerViewController(configuration: configuration)
+            picker.delegate = self
+            permissionCompletion = completion
+            navigationController.present(picker, animated: true, completion: nil)
+        case .location:
+            // TODO
+            break
+        }
+    }
+    
     private func buildSurveyStepViewController(for step: SurveyStep) -> SurveyStepViewController? {
         guard let survey = survey else {
             return nil
@@ -70,5 +88,20 @@ class PatientSurveyCoordinator: Coordinator {
         let surveyStepViewController = SurveyStepViewController(coordinator: self, step: step)
         surveyStepViewController.title = String(format: NSLocalizedString("Step %i of %i", comment: ""), currentStepIndex + 1, survey.steps.count)
         return surveyStepViewController
+    }
+}
+
+extension PatientSurveyCoordinator: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let result = results.first else {
+            permissionCompletion?(nil)
+            return
+        }
+        result.itemProvider.loadObject(ofClass: UIImage.self) { image, _ in
+            DispatchQueue.main.async {
+                self.permissionCompletion?(image as? UIImage)
+            }
+        }
     }
 }

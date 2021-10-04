@@ -57,7 +57,7 @@ class SurveySummaryViewController: UIViewController {
             itemLabel.textColor = .black
             itemLabel.translatesAutoresizingMaskIntoConstraints = false
             itemLabel.setContentHuggingPriority(.required, for: .vertical)
-            itemLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+            itemLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
             stackView.addArrangedSubview(itemLabel)
             
             if let commentary = item.commentary {
@@ -68,8 +68,23 @@ class SurveySummaryViewController: UIViewController {
                 commentaryLabel.textColor = .darkGray
                 commentaryLabel.translatesAutoresizingMaskIntoConstraints = false
                 commentaryLabel.setContentHuggingPriority(.required, for: .vertical)
-                commentaryLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+                commentaryLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
                 stackView.addArrangedSubview(commentaryLabel)
+            }
+            
+            if let data = item.data {
+                switch data {
+                case let image as UIImage:
+                    let imageView = UIImageView(image: image)
+                    imageView.contentMode = .scaleAspectFit
+                    imageView.clipsToBounds = true
+                    imageView.translatesAutoresizingMaskIntoConstraints = false
+                    imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 200).isActive = true
+                    stackView.addArrangedSubview(imageView)
+                    break
+                default:
+                    break
+                }
             }
         }
         

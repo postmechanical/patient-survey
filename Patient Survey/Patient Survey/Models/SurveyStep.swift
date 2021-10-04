@@ -5,7 +5,6 @@
 //  Created by Aaron London on 10/2/21.
 //
 
-import Foundation
 import UIKit
 
 struct SurveyStep {
@@ -25,7 +24,7 @@ struct SurveyStep {
         }
     }
     
-    func makeView(_ responseHandler: ((SurveyResponse) -> Void)?) -> UIView {
+    func makeView(coordinator: Coordinator?, responseHandler: ((SurveyResponse) -> Void)?) -> UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
@@ -41,9 +40,34 @@ struct SurveyStep {
             label.text = string
             label.textAlignment = .left
             promptView = label
-        case .permission(let permissionType):
-            // TODO
-            promptView = UIView()
+        case .permission(let string, let permissionType):
+            let permissionStackView = UIStackView()
+            permissionStackView.axis = .vertical
+            permissionStackView.distribution = .fillProportionally
+            permissionStackView.spacing = 8
+            permissionStackView.translatesAutoresizingMaskIntoConstraints = false
+            let label = UILabel()
+            label.numberOfLines = 0
+            label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .title1), size: 24)
+            label.text = string
+            label.textAlignment = .left
+            permissionStackView.addArrangedSubview(label)
+            switch permissionType {
+            case .camera:
+                let cameraButton = UIButton(frame: .zero, primaryAction: .init(handler: { action in
+                    coordinator?.promptFor(permission: permissionType, completion: { image in
+                        responseHandler?(SurveyResponse.permission(image != nil, permissionType, image as? UIImage))
+                    })
+                }))
+                cameraButton.configuration = .borderedProminent()
+                cameraButton.configuration?.image = UIImage(systemName: "camera.fill")
+                cameraButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                permissionStackView.addArrangedSubview(cameraButton)
+            case .location:
+                // TODO:
+                break
+            }
+            promptView = permissionStackView
             break
         }
         promptView.setContentHuggingPriority(.required, for: .vertical)
@@ -56,7 +80,7 @@ struct SurveyStep {
         switch responseType {
         case .bool:
             let label = UILabel()
-            label.numberOfLines = 1
+            label.numberOfLines = 0
             label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .callout), size: 14)
             label.text = NSLocalizedString("Toggle switch to select value and continue.", comment: "")
             label.textAlignment = .center
@@ -67,10 +91,11 @@ struct SurveyStep {
                 }
                 responseHandler?(SurveyResponse.bool(sender.isOn))
             }))
+            responseHandler?(SurveyResponse.bool(toggle.isOn))
             responseView = toggle
         case .permission:
             let label = UILabel()
-            label.numberOfLines = 1
+            label.numberOfLines = 0
             label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .callout), size: 14)
             label.text = NSLocalizedString("Tap button to grant permission to upload data and continue.", comment: "")
             label.textAlignment = .center
@@ -79,7 +104,7 @@ struct SurveyStep {
             responseView = UIView()
         case .scale(let range):
             let label = UILabel()
-            label.numberOfLines = 1
+            label.numberOfLines = 0
             label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .callout), size: 14)
             label.text = NSLocalizedString("Adjust slider to select value and continue.", comment: "")
             label.textAlignment = .center
@@ -92,10 +117,11 @@ struct SurveyStep {
             }))
             slider.minimumValue = Float(range.first ?? 0)
             slider.maximumValue = Float(range.last ?? 10)
+            responseHandler?(SurveyResponse.scale(range, Int(slider.minimumValue)))
             responseView = slider
         case .text:
             let label = UILabel()
-            label.numberOfLines = 1
+            label.numberOfLines = 0
             label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .callout), size: 14)
             label.text = NSLocalizedString("Type response and hit enter key to continue.", comment: "")
             label.textAlignment = .center

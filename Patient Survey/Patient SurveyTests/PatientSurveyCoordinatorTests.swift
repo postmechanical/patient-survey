@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Patient_Survey
+import PhotosUI
 
 class PatientSurveyCoordinatorTests: XCTestCase {
     var patientSurveyCoordinator: PatientSurveyCoordinator!
@@ -51,5 +52,11 @@ class PatientSurveyCoordinatorTests: XCTestCase {
         patientSurveyCoordinator.finish()
         XCTAssertTrue(navigationController.setViewControllers.argument?.viewControllers.first is SurveySummaryViewController)
         XCTAssertTrue(navigationController.setViewControllers.argument?.animated ?? false)
+    }
+    
+    func testWhenPromptForPermissionTypeWithCameraExpectNavigationControllerToPresentPhotoPicker() {
+        patientSurveyCoordinator.promptFor(permission: .camera, completion: nil)
+        XCTAssertTrue(navigationController.present.argument?.viewControllerToPresent is PHPickerViewController)
+        XCTAssertTrue(navigationController.present.argument?.animated ?? false)
     }
 }

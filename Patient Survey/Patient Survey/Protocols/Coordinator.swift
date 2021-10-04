@@ -12,4 +12,5 @@ protocol Coordinator: AnyObject {
     func start()
     func next(add response: SurveyResponse?)
     func finish()
+    func promptFor(permission: PermissionType, completion: ((Any?) -> Void)?)
 }

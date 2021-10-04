@@ -22,15 +22,10 @@ struct SurveyStepBuilder {
         case "text":
             return SurveyStep(prompt: .text(substituteKeyPaths(in: template.template)), responseType: template.responseType)
         case "permission":
-            let prompt: SurveyPrompt
-            switch template.template {
-            case "camera":
-                prompt = .permission(.camera)
-            case "location":
-                prompt = .permission(.location)
-            default:
+            guard case SurveyResponseType.permission(let permission) = template.responseType else {
                 return nil
             }
+            let prompt = SurveyPrompt.permission(substituteKeyPaths(in: template.template), permission)
             return SurveyStep(prompt: prompt, responseType: template.responseType)
         default:
             return nil

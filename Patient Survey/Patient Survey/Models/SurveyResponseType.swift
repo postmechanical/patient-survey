@@ -16,7 +16,7 @@ enum SurveyResponseType: Decodable {
     }
 
     case bool
-    case permission
+    case permission(PermissionType)
     case scale(ClosedRange<Int>)
     case text
 
@@ -27,8 +27,11 @@ enum SurveyResponseType: Decodable {
         case "bool":
             self = .bool
         case "permission":
-            // TODO
-            self = .permission
+            let value = try container.decode(String.self, forKey: .value)
+            guard let type = PermissionType(rawValue: value) else {
+                throw DecodingError.dataCorruptedError(forKey: .value, in: container, debugDescription: "Unknown `value`: \(value)")
+            }
+            self = .permission(type)
         case "scale":
             let range = try container.decode([Int].self, forKey: .value)
             self = .scale((range.first ?? 0)...(range.last ?? 10))

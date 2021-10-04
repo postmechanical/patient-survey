@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PermissionType: Summarizable {
+enum PermissionType: String, Summarizable {
     case camera
     case location
     

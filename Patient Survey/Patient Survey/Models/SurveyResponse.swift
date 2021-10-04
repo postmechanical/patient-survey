@@ -42,10 +42,11 @@ enum SurveyResponse: Summarizable {
                 text: string,
                 commentary: commentary
             )
-        case .permission(let bool, let permissionType, _):
+        case .permission(let bool, let permissionType, let data):
             return Summary(
                 text: String(format: bool ? NSLocalizedString("Granted %@ permissions", comment: "") : NSLocalizedString("Denied %@ permissions", comment: ""), permissionType.summary.text),
-                commentary: nil
+                commentary: nil,
+                data: data
             )
         }
     }

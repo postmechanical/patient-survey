@@ -13,6 +13,7 @@ import UIKit
 class MockNavigationController: NavigationControlling {
     let pushViewController = FunctionMock<(viewController: UIViewController, animated: Bool)>()
     let setViewControllers = FunctionMock<(viewControllers: [UIViewController], animated: Bool)>()
+    let present = FunctionMock<(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)>()
     
     func pushViewController(_ viewController: UIViewController, animated: Bool) {
         pushViewController.recordCall((viewController, animated))
@@ -20,5 +21,9 @@ class MockNavigationController: NavigationControlling {
     
     func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
         setViewControllers.recordCall((viewControllers, animated))
+    }
+    
+    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
+        present.recordCall((viewControllerToPresent, flag, completion))
     }
 }

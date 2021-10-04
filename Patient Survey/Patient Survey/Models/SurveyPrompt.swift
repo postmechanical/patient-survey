@@ -9,14 +9,14 @@ import Foundation
 
 enum SurveyPrompt: Summarizable {
     case text(String)
-    case permission(PermissionType)
+    case permission(String, PermissionType)
     
     var summary: Summary {
         switch self {
         case .text(let string):
             return Summary(text: string, commentary: nil)
-        case .permission(let permissionType):
-            return Summary(text: String(format: NSLocalizedString("Please grant %@ access to submit response.", comment: ""), permissionType.summary.text), commentary: nil)
+        case .permission(let string, let permissionType):
+            return Summary(text: String(format: NSLocalizedString("%@ Please grant %@ access to submit response.", comment: ""), string, permissionType.summary.text), commentary: nil)
         }
     }
 }

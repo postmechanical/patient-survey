@@ -30,7 +30,15 @@ class SurveyStepViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        let stepView = step.makeView { [weak self] response in
+
+        let nextButton = UIBarButtonItem(title: NSLocalizedString("Next", comment: ""), image: nil, primaryAction: .init(handler: { [weak self] action in
+            self?.coordinator?.next(add: self?.response)
+        }), menu: nil)
+        navigationItem.rightBarButtonItem = nextButton
+        nextButton.isEnabled = step.nextButtonStartsEnabled
+        self.nextButton = nextButton
+
+        let stepView = step.makeView(coordinator: coordinator) { [weak self] response in
             self?.response = response
         }
         stepView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,13 +49,6 @@ class SurveyStepViewController: UIViewController {
             stepView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             stepView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32)
         ])
-        
-        let nextButton = UIBarButtonItem(title: NSLocalizedString("Next", comment: ""), image: nil, primaryAction: .init(handler: { [weak self] action in
-            self?.coordinator?.next(add: self?.response)
-        }), menu: nil)
-        navigationItem.rightBarButtonItem = nextButton
-        nextButton.isEnabled = step.nextButtonStartsEnabled
-        self.nextButton = nextButton
     }
 }
 

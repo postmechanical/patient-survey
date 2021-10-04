@@ -17,8 +17,16 @@
   {
     "template": "We appreciate the feedback, one last question: how do you feel about being diagnosed with {diagnosis.name}?",
     "promptType": "text",
-    "responseType":  {
+    "responseType": {
       "name": "text"
+    }
+  },
+  {
+    "template": "Please upload a photo.",
+    "promptType": "permission",
+    "responseType": {
+      "name": "permission",
+      "value": "camera"
     }
   }
 ]
